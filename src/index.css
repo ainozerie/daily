@@ -2,14 +2,63 @@
 * {
   margin: 0;
   padding: 0;
+  color: var(--black);
+  transition-timing-function: ease;
+  transition-duration: 0.1s;
 }
 
+html {
+  background-color: var(--white);
+  user-select: none; /* Standard syntax */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  -webkit-user-select: none; /* Safari */
+}
 
 :root {
   --white: #ffffffde;
   --black: #242424;
   --gray: #888;
-  --green: #72b01dde;
+  --purple: #8367c7;
+  --purplesmoke: #8267c715;
+  --green: #2ba84a;
+  --greensmoke: #2ba84a23;
+  --darkblue: #a8d5e2;
+  --blue: #8bcee0;
+  --bluesmoke: #a8d5e220;
+  --red: #ef233b;
+  --redsmoke: #ef233b1a;
   font-family: Roboto;
   font-weight: 300;
+}
+
+input {
+  outline-style: none;
+  border: none;
+  border-radius: 2px;
+  background-color: whitesmoke;
+  height: 20px;
+  min-width: 120px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+button {
+  height: 36px;
+  min-width: 80px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 2px;
+  background-color: var(--green);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: whitesmoke;
+  font-weight: 300;
+  cursor: auto;
+}
+
+h1 {
+  font-size: 20px;
 }

@@ -1,0 +1,37 @@
+.app {
+    width: 90vw;
+    height: 100vh;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+header {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 4px;
+}
+
+a {
+    display: block;
+    padding: 8px 8px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+a.active {
+    background-color: var(--green);
+    background-color: #2ba84ab1;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+}

@@ -1,0 +1,69 @@
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.new-task {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-item {
+    font-weight: 300;
+    background-color: whitesmoke;
+    height: 36px;
+    padding: 8px 16px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-card .label {
+    margin-bottom: 16px;
+}
+
+.task-card .checkpoints {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.task-card .checkpoints .checkpoint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    color: var(--blue);
+    background-color: var(--bluesmoke);
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    font-style: italic;
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.task-card .checkpoints .checkpoint.failed {
+    color: var(--red);
+    background-color: var(--redsmoke);
+}
+.task-card .checkpoints .checkpoint.current {
+    cursor: pointer;
+    color: var(--purple);
+    background-color: var(--purplesmoke);
+
+}
+.task-card .checkpoints .checkpoint.success {
+    color: var(--green);
+    background-color: var(--greensmoke);
+}
+
+.task-card .checkpoints .checkpoint .icon {
+    color: inherit;
+    font-size: 36px;
+}
