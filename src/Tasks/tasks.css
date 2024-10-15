@@ -9,6 +9,9 @@
     flex-direction: column;
     gap: 8px;
 }
+.new-task button {
+    width: 160px;
+}
 
 .task-item {
     font-weight: 300;
@@ -37,33 +40,50 @@
     justify-content: center;
     flex-direction: column;
     gap: 2px;
-    color: var(--blue);
-    background-color: var(--bluesmoke);
+    color: #d3d3d3;
+    background-color: white;
     width: 80px;
     height: 80px;
-    border-radius: 4px;
+    border-radius: 8px;
     font-style: italic;
     position: relative;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 14px;
+    box-shadow: 0 2px 4px 0 #d3d3d3;
 }
 
 .task-card .checkpoints .checkpoint.failed {
-    color: var(--red);
-    background-color: var(--redsmoke);
+    color: white;
+    background-color: var(--red);
+}
+.task-card .checkpoints .checkpoint.upcoming {
+    font-weight: 500;
 }
 .task-card .checkpoints .checkpoint.current {
     cursor: pointer;
-    color: var(--purple);
-    background-color: var(--purplesmoke);
+    color: white;
+    background-color: var(--yellow);
 
 }
 .task-card .checkpoints .checkpoint.success {
-    color: var(--green);
-    background-color: var(--greensmoke);
+    color: white;
+    background-color: var(--green);
 }
 
 .task-card .checkpoints .checkpoint .icon {
     color: inherit;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.task-card .checkpoints .checkpoint.success .icon {
     font-size: 36px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.task-card .checkpoints .checkpoint.upcoming .icon {
+    font-weight: 300;
 }

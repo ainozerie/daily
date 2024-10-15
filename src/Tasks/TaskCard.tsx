@@ -38,13 +38,15 @@ export default function TaskCard() {
 
     const calculateGap = (): string => {
         const availableWidth = screen.width * 0.9;
-        console.log(availableWidth)
         const numOfElements = Math.floor(availableWidth / 80);
-        console.log(numOfElements)
-        const availableForGaps = availableWidth - numOfElements * 80;
-        console.log(availableForGaps)
-        let gap = availableForGaps / (numOfElements - 1);
-        console.log(gap)
+        let availableForGaps = availableWidth - numOfElements * 80;
+        let index = 1;
+        let gap = availableForGaps / (numOfElements - index);
+        while (gap < 8) {
+            availableForGaps = availableWidth - (numOfElements - index) * 80;
+            gap = availableForGaps / (numOfElements - index - 1);
+            index++;
+        }
 
         return `${gap}px`;
     }
@@ -64,12 +66,12 @@ export default function TaskCard() {
                             </span>)
                         } else if (position > 0) {
                             return (<span title={`Upcoming on ${cp.date}`}  className={'upcoming checkpoint'} key={cp.date}>
-                                <span className="material-symbols-outlined icon">hourglass_top</span>
+                                <span className="material-symbols-outlined icon">lock_open</span>
                                 {cp.date.slice(5).split('-').reverse().join('.')}
                             </span>)
                         } else {
                             return (<span title={checked ? 'Finished today' : 'Waiting today'} className={checked ? 'current checkpoint success' : 'current checkpoint'} key={cp.date} onClick={() => toggleCheckpointStatus(index)}>
-                                {checked ? <span className="material-symbols-outlined icon">check</span> : <span className="material-symbols-outlined icon">rocket_launch</span>}
+                                {checked ? <span className="material-symbols-outlined icon">check</span> : <span className="material-symbols-outlined icon">update</span>}
                                 {cp.date.slice(5).split('-').reverse().join('.')}
                             </span>)
                         }

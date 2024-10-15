@@ -18,9 +18,11 @@ html {
   --white: #ffffffde;
   --black: #242424;
   --gray: #888;
+  --whitesmoke: #f8f9fa;
+  --yellow: #ffd166;
   --purple: #8367c7;
   --purplesmoke: #8267c715;
-  --green: #2ba84a;
+  --green: #06d6a0;
   --greensmoke: #2ba84a23;
   --darkblue: #a8d5e2;
   --blue: #8bcee0;
@@ -35,11 +37,16 @@ input {
   outline-style: none;
   border: none;
   border-radius: 2px;
-  background-color: whitesmoke;
-  height: 20px;
+  background-color: var(--whitesmoke);
+  height: 28px;
   min-width: 120px;
   padding: 4px 8px;
   cursor: pointer;
+  font-size: 16px;
+}
+
+input:focus {
+  background-color: rgba(211, 211, 211, 0.5);
 }
 
 button {
@@ -51,14 +58,21 @@ button {
   background-color: var(--green);
   font-weight: 600;
   cursor: pointer;
+  color: white;
+  font-size: 14px;
 }
 
 button:disabled {
-  background-color: whitesmoke;
+  background-color: var(--whitesmoke);
   font-weight: 300;
   cursor: auto;
+  color: var(--black);
 }
 
 h1 {
   font-size: 20px;
+}
+
+a {
+  text-decoration: none;
 }
