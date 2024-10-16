@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import './app.css'
 import { useState } from "react";
+import Icon from "../Icon/Icon";
 
 export default function App() {
     const {pathname} = useLocation();
@@ -18,7 +19,10 @@ export default function App() {
         <div className="app">
             <header>
                 <Link to='/' className={setLinkActive('/')}>
-                    <span className="material-symbols-outlined icon logo">rocket_launch</span>
+                    <span className="logo">
+                        <span className="rocket-wrapper"><Icon name='rocket_launch'/></span>
+                        <span className="title">sisu</span>
+                    </span>
                 </Link>
                 <nav>
                     {!menuOpen && <span onClick={toggleMenu} className="material-symbols-outlined icon">menu</span>}

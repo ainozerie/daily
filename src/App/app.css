@@ -28,11 +28,26 @@ header {
 }
 
 .logo {
-    font-size: 28px;
     background: linear-gradient(-90deg, rgba(239,71,111,1) 0%, rgba(255,209,102,1) 100%);
-    color: white;
-    padding: 8px;
-    border-radius: 4px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.logo .icon {
+    font-size: 32px;
+}
+
+.logo .title {
+    font-family: "Baloo Paaji 2", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: italic;
+    margin-left: -4px;
+    margin-bottom: 4px;
+    width: 48px;
+
 }
 
 nav {

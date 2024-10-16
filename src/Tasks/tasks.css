@@ -52,6 +52,10 @@
     box-shadow: 0 2px 4px 0 #d3d3d3;
 }
 
+.task-card .checkpoints .checkpoint:hover {
+    scale: 1.06;
+}
+
 .task-card .checkpoints .checkpoint.failed {
     color: white;
     background-color: var(--red);
