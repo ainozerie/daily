@@ -58,7 +58,8 @@ export default function TaskCard() {
     if (task) {
         return (
             <div className="task-card">
-                <h1 className="label">{task.label} {task.checkpoints.filter(cp => cp.checked).length}/{task.checkpoints.length}</h1>
+                <h1 className="label"><span>{task.label}</span>{task.checkpoints.filter(cp => cp.checked).length}/{task.checkpoints.length}</h1>
+                <div className="progress" style={{'background': `linear-gradient(90deg, var(--green) ${Math.round(task.checkpoints.filter(cp => cp.checked).length / task.checkpoints.length * 100)}%, whitesmoke ${Math.round(task.checkpoints.filter(cp => cp.checked).length / task.checkpoints.length * 100)}%)`}}></div>
                 <div className="checkpoints" style={{'gap': calculateGap()}}>
                     {task.checkpoints.map((cp, index) => {
                         const position = getCheckpointPosition(cp);

@@ -9,6 +9,7 @@ import App from './App/App';
 import Tasks from './Tasks/Tasks';
 import NewTask from './Tasks/NewTask';
 import TaskCard from './Tasks/TaskCard';
+import Promo from './Promo/Promo';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <div>Promo</div>
+        element: <Promo/>
       },
       {
         path: 'tasks',

@@ -18,7 +18,7 @@ html {
 
 :root {
   --white: #ffffffde;
-  --black: #242424;
+  --black: #333333;
   --gray: #888;
   --whitesmoke: #f8f9fa;
   --yellow: #ffd166;
@@ -73,6 +73,7 @@ button:disabled {
 
 h1 {
   font-size: 20px;
+  font-weight: 400;
 }
 
 a {
