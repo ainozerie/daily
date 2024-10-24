@@ -50,7 +50,7 @@
     background-color: white;
     width: 80px;
     height: 80px;
-    border-radius: 8px;
+    border-radius: 4px;
     font-style: italic;
     position: relative;
     font-weight: 600;
@@ -65,6 +65,7 @@
 .task-card .checkpoints .checkpoint.failed {
     color: white;
     background-color: var(--red);
+    background-color: silver;
 }
 .task-card .checkpoints .checkpoint.upcoming {
     font-weight: 500;
@@ -103,5 +104,5 @@
     height: 8px;
     background-color: lightblue;
     margin: 0px 0 12px 0;
-    border-radius: 4px;
+    border-radius: 2px;
 }

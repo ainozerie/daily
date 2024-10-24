@@ -2,14 +2,11 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import './app.css'
 import { useState } from "react";
 import Icon from "../Icon/Icon";
+import Menu from "../Menu/Menu";
 
 export default function App() {
     const {pathname} = useLocation();
     const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
-    const setLinkActive = (path: string) => {
-        return pathname === path ? 'active' : '';
-    }
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -18,7 +15,7 @@ export default function App() {
     return (
         <div className="app">
             <header>
-                <Link to='/' className={setLinkActive('/')}>
+                <Link to='/'>
                     <span className="logo">
                         <span className="rocket-wrapper"><Icon name='rocket_launch'/></span>
                         <span className="title">sisu</span>
@@ -26,12 +23,9 @@ export default function App() {
                 </Link>
                 <nav>
                     {!menuOpen && <span onClick={toggleMenu} className="material-symbols-outlined icon">menu</span>}
-                    {menuOpen && <Link onClick={toggleMenu} to='/tasks' className={setLinkActive('/tasks')}>My goals</Link>}
-                    {menuOpen && <Link onClick={toggleMenu} to='/tasks/new' className={setLinkActive('/tasks/new')}>Add new</Link>}
-                    {menuOpen && <Link onClick={toggleMenu} to='/login' className={setLinkActive('/login')}>Login</Link>}
-                    {menuOpen && <span onClick={toggleMenu} className="material-symbols-outlined icon">close</span>}
                 </nav>
             </header>
+            <Menu open={menuOpen} closeMenu={toggleMenu}/>
             <main>
                 <Outlet />
             </main>
